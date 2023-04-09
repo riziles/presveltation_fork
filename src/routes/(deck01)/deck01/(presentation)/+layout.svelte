@@ -26,6 +26,6 @@
 	});
 </script>
 
-<Deck notesURL="./notes">
+<Deck notesURL="/deck01/notes">
 	<slot />
 </Deck>
