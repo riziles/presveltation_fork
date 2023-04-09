@@ -1,33 +1,19 @@
-<script>
+<script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { slides, currSlide } from '$lib/stores';
+	import { onMount, onDestroy } from 'svelte';
 
-	import './app.css';
-	import 'iconify-icon';
+	
 
-	const meta = {
-		title: 'PreSveltation: Create Presentations and Slideshows with Svelte & Tailwind CSS',
-		description:
-			'Create interactive and dynamic presentations and slideshows with Svelte / SvelteKit and Tailwind CSS.'
-	};
+	currSlide.update(n => 0)
+
+	onMount(() => {
+		goto('deck01/00-intro');
+	});
+	
+
 </script>
 
-<svelte:head>
-	<title>{meta.title}</title>
-	<!-- Meta Tags -->
-	<meta name="title" content={meta.title} />
-	<meta name="description" content={meta.description} />
-	<meta
-		name="keywords"
-		content="svelte, sveltekit, presenter, presentation, slideshow, tailwind, slides, powerpoint, typescript, css, revealjs, reveal js, open source"
-	/>
-	<meta name="author" content="Benedikt Mielke" />
-	<!-- Open Graph - https://ogp.me/ -->
-	<meta property="og:site_name" content="SvelteShow" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://svelte-show.vercel.app{$page.url.pathname}" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:title" content={meta.title} />
-	<meta property="og:description" content={meta.description} />
-</svelte:head>
 
 <slot />

@@ -9,14 +9,14 @@
 	import Deck from '$lib/Deck.svelte';
 
 	$slides = [
-		{ route: '/example/00-intro', title: 'Introduction', notes: true },
-		{ route: '/example/01-animations', title: 'Animations with Animate.CSS' },
-		{ route: '/example/02-lottie', title: 'Lottie-Player' },
-		{ route: '/example/03-animate-tailwind', title: 'Tailwind Transitions' },
-		{ route: '/example/04-code', title: 'Code Blocks' },
-		{ route: '/example/05-math', title: 'Math' },
-		{ route: '/example/06-prose', title: 'Markdown' },
-		{ route: '/example/final', title: 'Final Slide' }
+		{ route: '/deck01/00-intro', title: 'Introduction', notes: true },
+		{ route: '/deck01/01-animations', title: 'Animations with Animate.CSS' },
+		{ route: '/deck01/02-lottie', title: 'Lottie-Player' },
+		{ route: '/deck01/03-animate-tailwind', title: 'Tailwind Transitions' },
+		{ route: '/deck01/04-code', title: 'Code Blocks' },
+		{ route: '/deck01/05-math', title: 'Math' },
+		{ route: '/deck01/06-prose', title: 'Markdown' },
+		{ route: '/deck01/final', title: 'Final Slide' }
 	];
 
 	onMount(async () => {
@@ -26,6 +26,6 @@
 	});
 </script>
 
-<Deck notesURL="/example/notes">
+<Deck notesURL="./notes">
 	<slot />
 </Deck>
