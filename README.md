@@ -12,6 +12,12 @@ or
 pnpm add -D presveltation
 ```
 
+or
+
+```bash
+degit riziles/presveltation_fork#template
+```
+
 ## Links
 - [Documentation](https://presveltation.vercel.app/)
 - [Github](https://github.com/bennymi/presveltation)
